@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intuit Craft</title>
+    <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+</head>
+<body>
+        <h1>Twitter</h1>
+        <h2>Tweets mentioned QuickBooks</h2>
+        <h3>HasTag for QuickBook:</h3>
+        <table id = "hashTagTweets"></table>
+        <h3>AtTag for QuickBook:</h3>
+        <table id = "AtTagTweets"></table>
+
+        <h1>Stack Overflow</h1>
+        <h2>Questions on StackOverflow for QuickBooks:</h2>
+        <table id = "stackOverflowQuestions"></table>
+
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.getJSON("/IntuitCraft/api/Twitter/all", function (data) {
+                    $.each(data, function (index, tweets) {
+                        $("#hashTagTweets").append("<tr><td>" + tweets.Username + "</td>" +
+                                                     "<td>" + tweets.Content + "</td>" +
+                                                     "<td>" + tweets.Created_Time + "</td></tr>")
+                    })
+                })
+
+                $.getJSON("/IntuitCraft/api/Twitter/atQuickBookAPI", function (data) {
+                    $.each(data, function (index, tweets) {
+                        $("#AtTagTweets").append("<tr><td>" + tweets.Username + "</td>" +
+                                "<td>" + tweets.Content + "</td>" +
+                                "<td>" + tweets.Created_Time + "</td></tr>")
+                    })
+                })
+
+                $.getJSON("/IntuitCraft/api/StackExchange/all", function (data) {
+                    $.each(data, function (index, question) {
+                        $("#stackOverflowQuestions").append("<tr><td>" + question.Title + "</td>" +
+                                                  "<td>" + question.Link + "</td>" +
+                                                    "<td>" + question.Is_Answered + "</td>" +
+                                                    "<td>" + question.Score + "</td>" +
+                                                    "<td>" + question.Created_At + "</td></tr>")
+                    })
+                })
+            })
+        </script>
+
+</body>
+</html>

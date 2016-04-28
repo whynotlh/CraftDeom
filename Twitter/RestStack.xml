@@ -1,0 +1,61 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list>
+      <Biscuit>
+        <option name="date" value="1524809655000" />
+        <option name="domain" value="twitter.com" />
+        <option name="name" value="guest_id" />
+        <option name="path" value="/" />
+        <option name="value" value="v1%3A146173765564637177" />
+      </Biscuit>
+      <Biscuit>
+        <option name="date" value="-1" />
+        <option name="domain" value="api.twitter.com" />
+        <option name="name" value="lang" />
+        <option name="path" value="/" />
+        <option name="value" value="en" />
+      </Biscuit>
+    </list>
+  </option>
+  <option name="httpMethod" value="GET" />
+  <option name="urlBase" value="https://api.stackexchange.com" />
+  <option name="urlPath" value="/2.2/questions" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="application/xml" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="OAuth oauth_consumer_key=&quot;Li5kMlcpSbSHKSkaqcpk8X1xJ&quot;, oauth_nonce=&quot;96a580e68b99f1f7fa6a0e6bd0b40d46&quot;, oauth_signature=&quot;4blIYQEQQEoqA90m20DEkj%2B6a18%3D&quot;, oauth_signature_method=&quot;HMAC-SHA1&quot;, oauth_timestamp=&quot;1461706740&quot;, oauth_token=&quot;724810123282137089-i6hNqHRMToTYEqR7yGSIbMCrCh6LCN7&quot;, oauth_version=&quot;1.0&quot;" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="tagged" />
+        <option name="value" value="java" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="site" />
+        <option name="value" value="stackoverflow" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="key" />
+        <option name="value" value="gWAmzl2MwOkGihaTr*hlpg((" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="" />
+</RestClientRequest>
